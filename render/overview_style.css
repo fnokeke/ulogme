@@ -1,35 +1,40 @@
 body {
   font-family: Impact, Charcoal, sans-serif;
-  color: #333;
+  color: #6B8E23;
   font-size: 20px;
   margin: 0;
   padding: 0;
+	background-color: black;
 }
 h1 {
+	text-transform: uppercase;
   text-align: center;
-  color: #FFF;
+  color: black;
   font-size: 40px;
   font-weight: normal;
-  background-color: #F55;
+  background-color: #6B8E23; 
   margin: 0;
   padding: 20px;
 }
 #content {
   margin: 10px;
 }
+svg text {
+	fill: #808080;
+}
 #wrap {
   text-align: center;
 }
 #indexlink {
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
   top: 25px;
   right: 100px;
   font-weight: normal;
   font-family: 'Lato', sans-serif;
 }
 #indexlink a {
-  color: #FFF;
+  color: black;
 }
 h2 {
   font-weight: normal;
@@ -43,7 +48,7 @@ h2 {
 }
 #reloadbutton {
   position: absolute;
-  color: white;
+  color: #CC0066;
   font-size: 60px;
   right: 20px;
   top: 0px;

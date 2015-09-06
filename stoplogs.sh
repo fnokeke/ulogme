@@ -1,7 +1,7 @@
 #! /bin/sh
 
-# print processes
-ps aux | grep ulogme | grep -v grep
+# free port 8124
+sudo lsof -iTCP:8124 | awk '{print $2}' | xargs kill -9
 
-# kill processes
-ps aux | grep ulogme | grep -v grep | awk '{print $2}' | xargs kill
+# kill ulogme processes
+ps aux | grep ulogme | grep -v grep | awk '{print $2}' | xargs kill -9
