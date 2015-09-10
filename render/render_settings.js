@@ -9,24 +9,32 @@ var title_mappings = [
 {pattern : /Google Chrome/, mapto : 'Google Chrome'},
 {pattern : /Firefox/, mapto : 'Firefox'}, // lol
 {pattern : /Safari/, mapto : 'Safari'}, // lol
-{pattern : /Preview/, mapto : 'Preview'},
-{pattern : /.pdf/, mapto : 'Pdf'},
 {pattern : /Gmail/, mapto : 'Gmail'},
-{pattern : /Gmail/, mapto : 'Gmail'},
-{pattern : /iTerm/, mapto : 'iTerm'},
-{pattern : /fab-mac/, mapto : 'fab-iTerm'},
+{pattern : /facebook/, mapto : 'Facebook'},
+{pattern : /putlocker.is/, mapto : 'Movies'},
 {pattern : /Putlocker/, mapto : 'Movies'},
 {pattern : /Flash Player/, mapto : 'Movies'},
+{pattern : /The Wire/, mapto : 'Movies'},
+{pattern : /Hand of God/, mapto : 'Movies'},
+{pattern : /Silverlight/, mapto : 'Movies'},
+{pattern : /Preview/, mapto : 'Reading'},
+{pattern : /scholar.google.com/, mapto : 'Reading'},
+{pattern : /.pdf/, mapto : 'Reading'},
+{pattern : /Notes/, mapto : 'Writing'},
+{pattern : /Evernote/, mapto : 'Writing'},
 {pattern : /coursera/, mapto : 'Coursera'},
+{pattern : /cornell.hosted.panopto/, mapto : 'Coursera'},
 {pattern : /VirtualBox/, mapto : 'VirtualBox'},
-{pattern : /loginwindow/, mapto : 'Computer Idle'},
 {pattern : /Inotebook/, mapto : 'INotebook'},
+{pattern : /fab-mac/, mapto : 'fab-mac'},
+{pattern : /iTerm/, mapto : 'Terminal'},
 {pattern : /\.js.*Sublime Text/, mapto : 'SubText2 Coding'},
 {pattern : /\.py.*Sublime Text/, mapto : 'SubText2 Coding'},
 {pattern : /\.html.*Sublime Text/, mapto : 'SubText2 Coding'},
 {pattern : /\.cpp.*Sublime Text/, mapto : 'SubText2 Coding'},
 {pattern : /\.h.*Sublime Text/, mapto : 'SubText2 Coding'},
-{pattern : /__LOCKEDSCREEN/, mapto : 'Locked Screen'}, // __LOCKEDSCREEN is a special token
+{pattern : /loginwindow/, mapto : 'Computer Idle'},
+{pattern : /__LOCKEDSCREEN/, mapto : 'Computer Idle'}, // __LOCKEDSCREEN is a special token
 ];
 
 // be very careful with ordering in the above because titles
@@ -55,7 +63,8 @@ function mapwin(w) {
 // to group my work stuff and play stuff together.
 var display_groups = [];
 display_groups.push(["Gmail", "Google Chrome", "Safari", "Firefox", "MISC"]); // internet related
-display_groups.push(["Terminal", "Papers"]); // work related
+display_groups.push(["Reading", "Writing", "Coursera", "iTerm"]);
+display_groups.push(["Movies"]); // computer not being used 
 display_groups.push(["Computer Idle"]); // computer not being used 
 
 // list of titles that classify as "hacking", or being productive in general
@@ -64,7 +73,7 @@ display_groups.push(["Computer Idle"]); // computer not being used
 // classify as hacking, and they break "streaks" (events of focused hacking)
 // the implementation is currently quite hacky, experimental and contains 
 // many magic numbers.
-var hacking_titles = ["iTerm", "Terminal"];
+var hacking_titles = ["Terminal"];
 var draw_hacking = true; // by default turning this off
 
 // draw notes row?
@@ -73,4 +82,4 @@ var draw_notes = true;
 // experimental coffee levels indicator :)
 // looks for notes that mention coffee and shows 
 // levels of coffee in body over time
-var draw_coffee = false;
+var draw_coffee = true;
