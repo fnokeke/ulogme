@@ -17,9 +17,12 @@ var title_mappings = [
 {pattern : /The Wire/, mapto : 'Movies'},
 {pattern : /Hand of God/, mapto : 'Movies'},
 {pattern : /Silverlight/, mapto : 'Movies'},
+{pattern : /Spotify/, mapto : 'Music'},
+{pattern : /spotify/, mapto : 'Music'},
 {pattern : /Preview/, mapto : 'Reading'},
 {pattern : /scholar.google.com/, mapto : 'Reading'},
 {pattern : /.pdf/, mapto : 'Reading'},
+{pattern : /Mendeley Desktop/, mapto : 'Reading'},
 {pattern : /Notes/, mapto : 'Writing'},
 {pattern : /Evernote/, mapto : 'Writing'},
 {pattern : /coursera/, mapto : 'Coursera'},
@@ -64,7 +67,7 @@ function mapwin(w) {
 var display_groups = [];
 display_groups.push(["Gmail", "Google Chrome", "Safari", "Firefox", "MISC"]); // internet related
 display_groups.push(["Reading", "Writing", "Coursera", "iTerm"]);
-display_groups.push(["Movies"]); // computer not being used 
+display_groups.push(["Movies", "Music"]); // computer not being used 
 display_groups.push(["Computer Idle"]); // computer not being used 
 
 // list of titles that classify as "hacking", or being productive in general
