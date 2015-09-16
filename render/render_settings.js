@@ -23,6 +23,7 @@ var title_mappings = [
 {pattern : /scholar.google.com/, mapto : 'Reading'},
 {pattern : /.pdf/, mapto : 'Reading'},
 {pattern : /Mendeley Desktop/, mapto : 'Reading'},
+{pattern : /studentLife/, mapto : 'Reading'},
 {pattern : /Notes/, mapto : 'Writing'},
 {pattern : /Evernote/, mapto : 'Writing'},
 {pattern : /coursera/, mapto : 'Coursera'},
@@ -30,7 +31,9 @@ var title_mappings = [
 {pattern : /VirtualBox/, mapto : 'VirtualBox'},
 {pattern : /Inotebook/, mapto : 'INotebook'},
 {pattern : /fab-mac/, mapto : 'fab-mac'},
-{pattern : /iTerm/, mapto : 'Terminal'},
+{pattern : /iTerm/, mapto : 'Coding'},
+{pattern : /RStudio/, mapto : 'Coding'},
+{pattern : /notebooks/, mapto : 'Coding'},
 {pattern : /\.js.*Sublime Text/, mapto : 'SubText2 Coding'},
 {pattern : /\.py.*Sublime Text/, mapto : 'SubText2 Coding'},
 {pattern : /\.html.*Sublime Text/, mapto : 'SubText2 Coding'},
@@ -66,7 +69,7 @@ function mapwin(w) {
 // to group my work stuff and play stuff together.
 var display_groups = [];
 display_groups.push(["Gmail", "Google Chrome", "Safari", "Firefox", "MISC"]); // internet related
-display_groups.push(["Reading", "Writing", "Coursera", "iTerm"]);
+display_groups.push(["Reading", "Writing", "Coursera", "Coding"]);
 display_groups.push(["Movies", "Music"]); // computer not being used 
 display_groups.push(["Computer Idle"]); // computer not being used 
 
@@ -76,7 +79,7 @@ display_groups.push(["Computer Idle"]); // computer not being used
 // classify as hacking, and they break "streaks" (events of focused hacking)
 // the implementation is currently quite hacky, experimental and contains 
 // many magic numbers.
-var hacking_titles = ["Terminal"];
+var hacking_titles = ["Coding"];
 var draw_hacking = true; // by default turning this off
 
 // draw notes row?
